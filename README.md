@@ -8,3 +8,18 @@ Boilerplate Next.js 15 dashboard with App Router and shadcn/ui
 - [Shadcn-ui](https://ui.shadcn.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Biome](https://biomejs.dev/)
+
+
+## Getting Started
+
+```
+npm i
+npm run dev
+```
+
+## Format
+Code formatting with Biome
+
+```
+npm run format
+```
