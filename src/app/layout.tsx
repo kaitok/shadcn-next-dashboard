@@ -15,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SidebarProvider>
+          <AppSidebar />
+          <SidebarTrigger />
+          {children}
+        </SidebarProvider>
+      </body>
     </html>
   )
 }
