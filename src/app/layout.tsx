@@ -1,19 +1,19 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
-  title: 'shadcn-next-dashboard',
-  description: 'Example of a Next.js dashboard with shadcn/ui',
-}
+	title: "shadcn-next-dashboard",
+	description: "Example of a Next.js dashboard with shadcn/ui",
+};
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
-    </html>
-  )
+	return (
+		<html lang="en" suppressHydrationWarning>
+			<body>{children}</body>
+		</html>
+	);
 }
