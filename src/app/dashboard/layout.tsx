@@ -22,8 +22,11 @@ export default function DashboardLayout({
 		>
 			<SidebarProvider>
 				<AppSidebar />
-				<SidebarTrigger />
-				{children}
+
+				<div className="w-full p-5">
+					<SidebarTrigger />
+					{children}
+				</div>
 			</SidebarProvider>
 		</ThemeProvider>
 	)
