@@ -1,5 +1,8 @@
 import type { Metadata } from "next"
 import "./globals.css"
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { AppSidebar } from "@/components/layout/AppSidebar"
+import { ThemeProvider } from "@/components/layout/ThemeProvider"
 
 export const metadata: Metadata = {
 	title: "shadcn-next-dashboard",
@@ -13,7 +16,22 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>{children}</body>
+			<body>
+				<ThemeProvider
+					attribute="class"
+					defaultTheme="system"
+					enableSystem
+					disableTransitionOnChange
+				>
+					<SidebarProvider>
+						<AppSidebar />
+						<div className="w-full p-5">
+							<SidebarTrigger />
+							{children}
+						</div>
+					</SidebarProvider>
+				</ThemeProvider>
+			</body>
 		</html>
 	)
 }
