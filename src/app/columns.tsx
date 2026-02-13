@@ -9,6 +9,7 @@ export type Payment = {
 	amount: number
 	status: "pending" | "processing" | "success" | "failed"
 	email: string
+	example: string
 }
 
 export const columns: ColumnDef<Payment>[] = [
@@ -23,5 +24,9 @@ export const columns: ColumnDef<Payment>[] = [
 	{
 		accessorKey: "amount",
 		header: "Amount",
+	},
+	{
+		accessorKey: "example",
+		header: "Example",
 	},
 ]
