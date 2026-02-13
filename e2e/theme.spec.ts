@@ -16,10 +16,9 @@ test.describe("Theme Toggle", () => {
 		const themeButton = page.locator('button').filter({ has: page.locator('svg') }).last()
 		await themeButton.click()
 
-		// Verify the dropdown menu content appears (it renders in a portal)
-		// Just check that clicking the button works without errors
-		// The actual theme switching is tested by the presence of the button
-		await page.waitForTimeout(500)
+		// Verify the button is still visible and clickable after interaction
+		// The dropdown menu functionality is handled by Radix UI
+		await expect(themeButton).toBeVisible()
 	})
 
 	test("should render in the sidebar footer area", async ({ page }) => {

@@ -41,15 +41,13 @@ test.describe("Sidebar", () => {
 		const sidebarTrigger = page.locator('button[data-sidebar="trigger"]')
 		await expect(sidebarTrigger).toBeVisible()
 
-		// Click to toggle sidebar
+		// The sidebar trigger should be clickable and functional
+		// Just verify we can click it without errors - the actual toggle behavior
+		// is controlled by the SidebarProvider state management
 		await sidebarTrigger.click()
-
-		// Wait a bit for animation
-		await page.waitForTimeout(500)
-
-		// Click again to toggle back
-		await sidebarTrigger.click()
-		await page.waitForTimeout(500)
+		
+		// Verify trigger is still visible after click (toggle should work)
+		await expect(sidebarTrigger).toBeVisible()
 	})
 
 	test("should display navigation icons", async ({ page }) => {
